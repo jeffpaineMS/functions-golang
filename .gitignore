@@ -1,5 +1,6 @@
 
 .vscode
+*.go
 
 # Azure Functions artifacts
 bin
