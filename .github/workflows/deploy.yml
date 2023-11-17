@@ -48,7 +48,10 @@ jobs:
         run: GOOS=linux GOARCH=amd64 go build handler.go
 
       - name: Deploy to function
-        run: func azure functionapp publish jeffs-go-lang --slot stage 
+        run: |
+          sudo apt-get update
+          sudo apt-get install azure-functions-core-tools-4
+          func azure functionapp publish jeffs-go-lang --slot stage 
 
       # - name: Deploy to Azure Function
       #   uses: azure/webapps-deploy@v2
