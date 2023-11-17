@@ -54,6 +54,9 @@ jobs:
         run: |
           func --version
           func azure functionapp publish jeffs-go-lang --slot stage --custom
+      - name: Swap Slot to function
+        run: |
+          az functionapp deployment slot swap --slot stage -g example-resources -n jeffs-go-lang
 
       # - name: Deploy to Azure Function
       #   uses: azure/webapps-deploy@v2
