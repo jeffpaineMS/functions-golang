@@ -46,16 +46,15 @@ jobs:
 
       - name: Build Go App
         run: GOOS=linux GOARCH=amd64 go build handler.go
-      - name: Setup Func core tools
-        run: |
-          sudo apt-get update
-          sudo apt-get install azure-functions-core-tools-4
+      # - name: Setup Func core tools
+      #   run: |
+      #     sudo apt-get update
+      #     sudo apt-get install azure-functions-core-tools-4
       - name: Deploy
         uses: Azure/functions-action@v1
         with:
-          app-name: "jeffs-go-lang"
-          slot-name: stage
-          respect-funcignore: true
+          app-name: jeffs-go-lang
+          
 
       # - name: Deploy to function
       #   env: 
