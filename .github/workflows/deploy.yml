@@ -51,9 +51,10 @@ jobs:
           sudo apt-get update
           sudo apt-get install azure-functions-core-tools-4
       - name: Deploy to function
+        env: 
+          CLI_DEBUG: 1 
         run: |
-          func --version
-          $env:CLI_DEBUG=1 
+          func --version         
           func azure functionapp publish jeffs-go-lang --custom
       # - name: Swap Slot to function
       #   run: |
