@@ -51,7 +51,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install azure-functions-core-tools-4
-          func azure functionapp publish jeffs-go-lang --slot stage 
+          func azure functionapp publish jeffs-go-lang --slot stage --custom
 
       # - name: Deploy to Azure Function
       #   uses: azure/webapps-deploy@v2
