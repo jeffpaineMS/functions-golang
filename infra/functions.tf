@@ -88,7 +88,7 @@ resource "azurerm_monitor_diagnostic_setting" "example" {
 
   }
 }
-resource "azurerm_monitor_diagnostic_setting" "example" {
+resource "azurerm_monitor_diagnostic_setting" "example-slot" {
   name                       = "example"
   target_resource_id         = azurerm_linux_function_app_slot.example.id
   log_analytics_workspace_id = azurerm_log_analytics_workspace.example.id
