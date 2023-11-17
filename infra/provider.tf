@@ -7,7 +7,8 @@ terraform {
     }
   }
   backend "azurerm" {
-    key = "go-funcs"
+    key      = "go-funcs"
+    use_oidc = true
   }
 }
 
