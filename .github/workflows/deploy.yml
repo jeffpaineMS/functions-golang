@@ -55,7 +55,7 @@ jobs:
           CLI_DEBUG: 1 
         run: |
           func --version         
-          func azure functionapp publish jeffs-go-lang --custom
+          func azure functionapp publish jeffs-go-lang --slot stage --custom
       - name: Swap Slot to function
         run: |
           az functionapp deployment slot swap --slot stage -g example-resources -n jeffs-go-lang
